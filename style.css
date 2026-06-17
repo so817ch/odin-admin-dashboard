@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Bold.woff2') format('woff2'),
+    url('./fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+    url('./fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --content-font: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  font-family: var(--content-font);
+  font-size: 16px;
+  grid-template: 60px 90px 1fr / 300px 1fr;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.white-icon {
+  fill: white;
+}
+
+.large-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.sidebar {
+  background-color: #1992D4;
+  grid-row: 1 / span 3;
+  display: grid;
+  gap: 30px;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-area {
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 5px;
+}
+
+.sidebar .part {
+  display: grid;
+  gap: 15px;
+}
+
+.sidebar .part div{
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 90px;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.header .part {
+  display: grid;
+  align-items: center;
+}
+
+.header form {
+  grid-template-columns: max-content 1fr;
+  gap: 15px;
+}
+
+.header form input{
+  outline: none;
+  border: 0;
+  background-color: lightgray;
+  border-radius: 100px;
+  height: 26px;
+  padding-left: 10px;
+}
+
+.header .right {
+  grid-template-columns: repeat(3,max-content);
+  gap: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.header .right .avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.welcome {
+  background-color: white;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: repeat(2,max-content);
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.welcome .avatar {
+  height: 60px;
+  width: 60px;
+  background-color: bisque;
+}
+
+.welcome .part {
+  display: grid;
+  align-items: center;
+}
+
+.welcome .left {
+  grid-template-columns: max-content 1fr;
+  gap: 15px;
+}
+
+.welcome .slogan p:first-child{
+  font-size: 12px;
+}
+
+.welcome .slogan p:last-child{
+  font-size: 20px;
+}
+
+.welcome .right {
+  grid-template-columns: repeat(3,90px);
+  gap: 25px;
+}
+
+.welcome .right button {
+  height: 35px;
+  border: 0;
+  background-color: #1992D4;
+  border-radius: 120px;
+  color: white;
+  font-weight: inherit;
+}
+
+.main {
+  background-color: lightgray;
+}
