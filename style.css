@@ -51,7 +51,8 @@ body {
   background-color: #1992D4;
   grid-row: 1 / span 3;
   display: grid;
-  gap: 30px;
+  grid-template-rows: repeat(3, max-content);
+  gap: 45px;
   padding: 15px;
   color: white;
   font-weight: bold;
@@ -70,7 +71,7 @@ body {
   gap: 15px;
 }
 
-.sidebar .part div{
+.sidebar .part div {
   padding: 0 10px;
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -97,7 +98,7 @@ body {
   gap: 15px;
 }
 
-.header form input{
+.header form input {
   outline: none;
   border: 0;
   background-color: lightgray;
@@ -107,7 +108,7 @@ body {
 }
 
 .header .right {
-  grid-template-columns: repeat(3,max-content);
+  grid-template-columns: repeat(3, max-content);
   gap: 20px;
   font-weight: bold;
   margin-right: 15px;
@@ -126,9 +127,11 @@ body {
   background-color: white;
   padding: 0 35px;
   display: grid;
-  grid-template-columns: repeat(2,max-content);
+  grid-template-columns: repeat(2, max-content);
   justify-content: space-between;
   font-weight: bold;
+  box-shadow: 3px 3px 5px lightgray;
+  position: relative;
 }
 
 .welcome .avatar {
@@ -147,16 +150,16 @@ body {
   gap: 15px;
 }
 
-.welcome .slogan p:first-child{
+.welcome .slogan p:first-child {
   font-size: 12px;
 }
 
-.welcome .slogan p:last-child{
+.welcome .slogan p:last-child {
   font-size: 20px;
 }
 
 .welcome .right {
-  grid-template-columns: repeat(3,90px);
+  grid-template-columns: repeat(3, 90px);
   gap: 25px;
 }
 
@@ -170,5 +173,95 @@ body {
 }
 
 .main {
-  background-color: lightgray;
+  background-color: #E2E8F0;
+  display: grid;
+  grid-template: 1fr 40px / 3fr 1fr;
+  padding: 15px;
+  gap: 15px;
+}
+
+p.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-block: 10px;
+}
+
+.main .container {
+  display: grid;
+}
+
+.main .projects {
+  grid-row: 1 / span 1;
+}
+
+.main .projects .container {
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-auto-rows: max-content;
+  gap: 25px 20px;
+}
+
+.main .projects .card {
+  background-color: #F0B429;
+  border-radius: 10px;
+  padding-left: 10px;
+  box-shadow: 3px 3px 5px lightgray;
+}
+
+.main .projects .content {
+  background-color: white;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  padding: 25px 20px;
+  display: grid;
+  grid-template-rows: repeat(2,max-content);
+  align-content: space-between;
+}
+
+.main .projects .description {
+  margin-right: 25px;
+}
+
+.main .projects .description p:first-child {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.main .projects .description p:last-child {
+  color: #666666;
+}
+
+.main .projects .icons {
+  margin-right: 10px;
+  margin-top: 20px;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3,max-content);
+  gap: 30px;
+}
+
+.main .announcements .card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.main .announcements .card .content {
+  padding: 15px 10px;
+}
+
+.main .announcements .card .content:not(:last-child) {
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.main .announcements .card .content p:first-child {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.main .announcements .card .content p:last-child{
+  font-size: 12px;
+  height: max-content;
+  overflow: hidden;
+  color: #666666;
 }
